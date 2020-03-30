@@ -10,7 +10,7 @@ numGuesses = 0
 
 while not match:
     guessing = ""    
-    while guessing == "" or not 0 < int(guessing) < 21: 
+    while  not guessing.isnumeric() or not 0 < int(guessing) < 21: 
         guessing = input("Take a guess between 1 and 20: ")
 
     theGuess = int(guessing)
