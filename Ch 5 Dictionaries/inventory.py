@@ -21,14 +21,20 @@ def displayInventory(inventory):
     print("Total number of items: " + str(item_total))
 
 
-def addToInventory(inventory, addedItems):
-    for i in range(len(addedItems)):
-        # item=addedItems[i]
-        itemnum=inventory.get(addedItems[i])
+# def addToInventory(inventory, addedItems):
+#     for i in range(len(addedItems)):
+#         # item=addedItems[i]
+#         itemnum=inventory.get(addedItems[i])
 
-        #i keep thinking this should be able to be done in one line with setdefault
-        if itemnum == None: itemnum=0 
-        inventory[addedItems[i]] = itemnum + 1
+#         #i keep thinking this should be able to be done in one line with setdefault
+#         if itemnum == None: itemnum=0 
+#         inventory[addedItems[i]] = itemnum + 1
+#     return(inventory)
+
+def addToInventory(inventory, addedItems):
+    for i in addedItems:
+        inventory.setdefault(i,0)
+        inventory[i]+=1
     return(inventory)
 
 
