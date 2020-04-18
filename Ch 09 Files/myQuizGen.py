@@ -19,7 +19,7 @@ def createHeader(title):
 def createQuestions(theDict,numQ,numA):
     questions = [] #list of [state,{letter:answers}, correct answer]
     # [state,{a:s1, b:s2, c:s3, d:s4},c]
-    for q in range(numQ):
+    for _ in range(numQ):
         #get random q
         #this could result in duplicate states
         state,cap = random.choice(list(theDict.items()))
